@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo tests suite">
+    <listeners>
+        <listener class-name="com.nimi.api.report.TestListener" />
+    </listeners>
+    <test name="Api automation data setup">
+        <classes>
+            <class name="tests.com.nimi.api.tests.DataSetupTests"/>
+        </classes>
+    </test>
+
+    <test name="Api automation invite admin with super admin doesn't have company registered tests">
+        <classes>
+            <class name="tests.com.nimi.api.tests.InviteAdminTests">
+                <methods>
+                    <include name="inviteNewAdminWithSuperAdminDoesntHaveCompanyRegistered"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Api automation admin tests">
+        <classes>
+            <class name="tests.com.nimi.api.tests.AdminTests"/>
+        </classes>
+    </test>
+
+    <test name="Api automation invite admin tests">
+        <classes>
+            <class name="tests.com.nimi.api.tests.InviteAdminTests">
+                    <methods>
+                        <include name="inviteNewAdminWithAlreadyExistingEmail"/>
+                        <include name="inviteNewAdminWithNameInInvalidFormat"/>
+                        <include name="inviteNewAdminWithEmailInInvalidFormat"/>
+                        <include name="inviteNewAdminWithWrongAdminType"/>
+                        <include name="inviteNewAdminWithoutMandatoryFields"/>
+                        <include name="inviteNewAdminWithAllValidData"/>
+                    </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Api automation employee register tests">
+        <classes>
+            <class name="tests.com.nimi.api.tests.RegisterEmployeeTests"/>
+        </classes>
+    </test>
+
+    <test name="Api automation check email exist as an Admin tests">
+        <classes>
+            <class name="tests.com.nimi.api.tests.CheckEmailRegisteredAsAdminTests"/>
+        </classes>
+    </test>
+
+    <test name="Api automation send invitation emails to Admins and Employees tests">
+        <classes>
+            <class name="tests.com.nimi.api.tests.SendInvitationEmailTests"/>
+        </classes>
+    </test>
+</suite>

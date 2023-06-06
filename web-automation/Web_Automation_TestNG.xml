@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo tests suite">
+    <listeners>
+        <listener class-name="com.nimi.ui.report.TestListener" />
+    </listeners>
+    <test name="Web automation sanity tests" preserve-order="true">
+        <classes>
+            <class name="tests.UIDataSetupTests">
+                <methods>
+                    <include name="registerNewAdmin"/>
+                    <include name="adminLogin"/>
+                    <include name="registerNewCompany"/>
+                </methods>
+            </class>
+            <class name="tests.AdminUITests">
+            </class>
+        </classes>
+    </test>
+</suite>

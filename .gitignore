@@ -1,0 +1,10 @@
+/jar
+/api-automation/target
+/web-automation/target
+/mobile-automation/target
+.idea
+multi-module-automation.iml
+api-automation.iml
+web-automation.iml
+/api-automation/TestReport
+/web-automation/TestReport
